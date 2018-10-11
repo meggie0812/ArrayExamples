@@ -44,19 +44,35 @@ class Main
          *          Copy the elements of ar1 into ar2.
          */
         System.out.println("*** PRINTING ar2 *");
-        //NOT reversable with int[] ar2 = ar1;
+          int[] ar2;
+           
         
-        int[] ar2 = new int[ar1.length];
-        for(int i=0; i<ar1.length; i++)
-            ar2[i]=ar1[i]; // ar2 = ar1.clone();
+        // 
+        // ar2 = ar1.clone() also does this
+        // ar2 = ar1, just copies the address so you are not copying the array
+        //
+        ar2= new int[ ar1.length ]; // sets the size of the array to equal ar1.
+        for (int i=0 ; i<ar2.length ; i++)
+        {
+            ar2[i]=ar1[i];
+        }
         
-        for(int i=0; i<n; i++)
-            System.out.println("ar2["+i+"] = "+ar1[i]);
-       
+        //                      ar2[    i    ] =   i    
+        for (int i=0 ; i<ar2.length ; i++)
+            System.out.println("ar2[" + i + "] = "+ar2[i]);
+        //                      ar2[    i    ] =   i
+        
         
         /* 
          * Task 3. Add 1 to each element in ar1.  Print it out below
          */
+        System.out.println("*** printing task 3*");
+        for(int i=0; i<ar1.length; i++)
+            ar1[i]=ar1[i]+1;
+            
+        for(int i=0; i<ar1.length; i++)
+            System.out.println("ar1["+i+"] = "+ar1[i]);
+        
         
 
         
@@ -66,8 +82,26 @@ class Main
          *         Copy the elements of ar1 into ar3.  Then do it again
          *         For example
          *         ar1: 1 2 3
-         *         ar3: 1 2 3 0 1 2 3
+         *         ar3: 1 2 3 1 2 3
          */
+        System.out.println("*** printing task 4*");
+        int[] ar3 = new int[ ar1.length*2 ];
+         for (int i=0 ; i< ar1.length ; i++)
+        {
+            ar3[i]=ar1[i];
+        }
+        
+        for (int i=0 ; i<ar1.length ; i++)
+        {
+            ar3[i+ar1.length]=ar1[i];
+        }
+        
+        for (int i=0 ; i<ar3.length ; i++)
+            System.out.println("ar3[" + i + "] = "+ar3[i]);
+      
+        
+        
+        
         
         
         /*
@@ -189,6 +223,6 @@ class Main
           * fb[3]=fb[1]+fb[2]
           * fb[4]=fb[2]+fb[3]
           */
-        
+       
     }
 }
