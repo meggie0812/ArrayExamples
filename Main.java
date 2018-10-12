@@ -86,7 +86,7 @@ class Main
          */
         System.out.println("*** printing task 4*");
         int[] ar3 = new int[ ar1.length*2 ];
-         for (int i=0 ; i< ar1.length ; i++)
+         for (int i=0 ; i<ar1.length ; i++)
         {
             ar3[i]=ar1[i];
         }
@@ -108,6 +108,26 @@ class Main
          * Task 5.  Switch the first and last element of ar1.
          *          print out the new ar1.  Then switch them back
          */
+        System.out.println("** Task 5**");
+
+        // Ye olde switcheroo
+        int      value;
+        value  = ar1[0];  // backup ar1[0] into a bitbucket
+
+        ar1[0] = ar1[ar1.length-1];  // copy last into ar1[0].  
+
+        ar1[ar1.length-1]=value;     // copy old value of ar1[0] into last
+        
+
+        // Print out the array
+        for (int i=0 ; i<ar1.length ; i++)
+            System.out.println("ar1[" + i + "] = "+ar1[i]);
+        
+        // The Restoration of the rightful heir
+        value  = ar1[0];
+        ar1[0] = ar1[ar1.length-1];
+        ar1[ar1.length-1] = value;
+    
         
         /*
          * Task 6A. Print the 2nd to (n-1)th elements of ar1
@@ -116,6 +136,30 @@ class Main
          *          the indices are multiples of 3
          *         
          */
+        System.out.println("** Task 6a**");
+        // print 2nd to (n-1)th element
+        for (int i=1 ; i<ar1.length-1 ; i++)
+            System.out.println(ar1[i]);
+        
+            
+        System.out.println(" ** Task 6B **");
+        // print odd numbers in ar1
+        // AKA if ar1[i] is odd, print it out.
+        for (int i=0 ; i<ar1.length ; i++)
+            if (ar1[i]%2==1)
+                System.out.println(ar1[i]);
+            
+            
+        System.out.println(" ** Task 6C **");
+        // print elements if it is a multiple of 3
+        // AKA if ar1[i] is divisble by 3, print it out.
+        // AKA if ar1[2] has a zero as the remainer when divided by 3
+        for (int i=0 ; i<ar1.length ; i++)
+            if (ar1[i]%3==0)
+                System.out.println(ar1[i]);
+            
+        
+        
         
         /*
          * Task 7.  For each element in ar1, 
@@ -128,6 +172,17 @@ class Main
          *          ar[2]=30
          *          ar[3]=4
          */
+        System.out.println("*** print task 7 *");
+        for(int i=0; i<ar1.length; i++)
+        {
+            if (ar1[i]%2!=0)
+            {
+                ar1[i]+=ar1[i]*10;
+                
+            }
+            System.out.println(ar1[i]);
+        }
+        
         
          /*
           * Task 8
