@@ -218,25 +218,25 @@ class Main
          * have.  Then create an ew array called ar4.  Copy just the odd
          * numbers from ar1 into ar4.  Print ar4
          */
-        for(int i=0; i<ar2.length; i++)
-        {
-            if(ar2[i]%2==1)
-                14++;
-        }
-        int[] ar4 = new int[14];
-        
-        k=0;
-        for(int i=0; i<ar2.length; i++)
-        {
-            if(ar2[i]%2==1)
-            {
-                ar4[k]=ar2[i];
-            }
-        }
-        for(int i=0; i<ar2.length; i++)
-        {
-            System.out.println(ar4[i]);
-        }
+        int l4=0;
+         for (int i=0 ; i<ar2.length ; i++)
+         {
+             if ( ar2[i]%2==1)
+                 l4++;
+         } 
+         int[] ar4 = new int[l4];
+         k=0;
+         for (int i=0 ; i<ar2.length ; i++)
+         {
+             if (ar2[i]%2==1)
+             {
+                 ar4[k]=ar2[i];
+                 k++;
+             }
+          }
+                   
+           for (int i=0 ; i<k ; i++)
+               System.out.println(ar4[i]);
         
         
         /*
