@@ -196,21 +196,21 @@ class Main
          System.out.println("*** print task 8*");
             
          int k=0;
-         
-         int[] ar2odds = new int[ar2.length];
-         for(int i=0; i<ar2.length; i++)
-         { 
-             System.out.println(ar2[i]);
-             if(i%2==1)
-             {
-                ar2odds[k]=ar2[i];
-                k++;
-            }
-          
-         }
-         
-         for(int i=0; i<k; i++)
-             System.out.println(ar2odds[i]);
+           int[] ar2odds = new int[ar2.length]; // too big right now.
+           for ( int i=0 ; i<ar2.length ; i++)
+           {
+               System.out.println(ar2[i]); // Just print it out to see
+               
+               if (i%2==1)
+               {
+                   ar2odds[k]=ar2[i];
+                   k++;
+               }
+           }
+           
+           for (int i=0 ; i<k ; i++)
+               System.out.println(ar2odds[i]);
+ 
             
          
         /*
@@ -245,6 +245,23 @@ class Main
          * old   ar4: 1 3 5 7 9
          * new   ar4  9 1 3 5 7
          */
+       System.out.println("** Task 10 ** ");
+         System.out.println("Original ar4");
+         for (int i=0 ; i<ar4.length ; i++)
+             System.out.println(ar4[i]);
+        
+
+         int temp10=ar4[ar4.length-1];
+         
+         for (int i=ar4.length-1 ; i>0 ; i--)
+            ar4[i]=ar4[i-1];   //code that shifts 
+         
+         ar4[0]=temp10;
+
+         System.out.println("New ar4");
+         for (int i=0 ; i<ar4.length ; i++)
+             System.out.println(ar4[i]);
+ 
         
         
         /*
