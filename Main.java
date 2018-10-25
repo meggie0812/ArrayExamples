@@ -267,18 +267,26 @@ class Main
         /*
          * Task 11.  Reverse the order of elements in ar2
          */
-        System.out.println("*** task 11 *");
-        System.out.println("original ar2");
-        
+        System.out.println("** Task 11 **");
         for (int i=0 ; i<ar2.length ; i++)
-             System.out.println(ar2[i]);
-        int ar2half=ar2.length/2;
-             
-        int[] task11Temp;
-        for(int i=ar2.length-1; i>0; i--)
+            System.out.println("ar2["+i+"] = "+ar2[i]);
+            
+        int ar2half = ar2.length/2;
+        System.out.println(ar2half);
+        int task11Temp;
+        for (int i=0 ; i<ar2half ; i++)
         {
-            ar2Copy[i]=ar2[i];
+            task11Temp = ar2[i];
+            System.out.println(" "+i+":"+(ar2.length-i));
+            ar2[i] = ar2[ar2.length-1-i];
+            ar2[ar2.length-1-i]=task11Temp;
         }
+               
+        for (int i=0 ; i<ar2.length ; i++)
+            System.out.println("ar2["+i+"] = "+ar2[i]);
+        
+        
+ 
         
         
              
@@ -310,6 +318,32 @@ class Main
          *  
          *  Count how many words have more than 5 letters.
          */
+        System.out.println("*** task 12 *");
+        String[] ar5={"Four", "score", "and", "seven", "years", "ago", "our",
+           "fathers", "brought", "forth", "on", "this", "continent", "a", "new",
+          "nation"};
+        for(int i=0; i<ar5.length; i++)
+        { 
+            System.out.println(ar5[i]);
+        }
+        
+        int moreThan5=0;
+        int[] ar6=new int[ar5.length];
+        for(int i=0; i<ar5.length; i++)
+        {
+            String word=ar5[i];
+            
+            
+            if(word.length()>5)
+            {
+                moreThan5+=1;
+            }
+        
+        }
+         System.out.println(moreThan5);
+        
+        
+        
         
         /*
          * Task 13
@@ -325,6 +359,8 @@ class Main
          * Use a for loop to print out the names of monster that start with
          * a vowel
          */
+        
+        
         
          /*
           * Task 14
