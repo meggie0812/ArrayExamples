@@ -285,8 +285,51 @@ class Main
         for (int i=0 ; i<ar2.length ; i++)
             System.out.println("ar2["+i+"] = "+ar2[i]);
         
+            
+            
+            
+            
+           System.out.println("** Task 11    method 2**");
+      
+      for (int i=0 ; i<ar2.length ; i++)
+            System.out.println("ar2["+i+"] = "+ar2[i]);
+
+      int kk=ar2.length-1;
+
+
+     int[] b=new int[ar2.length];
+       for (int i=0 ; i<ar2.length ; i++)
+       {
+           b[kk]=ar2[i];
+           kk--;
+        }
         
+        for (int i=0 ; i<ar2.length ; i++)
+        {
+            ar2[i]=b[i];
+        } 
  
+        
+        
+        
+        
+        System.out.println("** Task 11     method 3**");
+        for (int i=0 ; i<ar2.length ; i++)
+            System.out.println("ar2["+i+"] = "+ar2[i]);
+            
+        
+       for (int i=0 ; i<ar2.length ; i++)
+       {
+           b[ar2.length-1-i]=ar2[i];
+        }
+        for (int i=0 ; i<ar2.length ; i++)
+        {
+            ar2[i]=b[i];
+        }
+        
+        for (int i=0 ; i<ar2.length ; i++)
+            System.out.println("ar2["+i+"] = "+ar2[i]);
+        
         
         
              
@@ -328,19 +371,62 @@ class Main
         }
         
         int moreThan5=0;
-        int[] ar6=new int[ar5.length];
+        String[] ar6=new String[ar5.length];
         for(int i=0; i<ar5.length; i++)
         {
             String word=ar5[i];
             
-            
             if(word.length()>5)
             {
                 moreThan5+=1;
+                for(int y=0; y<ar5.length; y++)
+                {
+                    ar6[y]+=ar5[i];
+                }
             }
         
         }
-         System.out.println(moreThan5);
+         System.out.println("task 12 is "+moreThan5);
+         for(int i=0; i<ar5.length; i++)
+        {
+         
+         
+         
+         
+         
+         System.out.println("task 12 solution");
+         int count5=0;
+ 
+         for (int i=0 ; i<ar5.length ; i++)
+         {
+         // ar5[i] is a String object
+         // ar5[2] is "and"
+         // ar5[2].length() is 3.
+         
+             if (ar5[i].length()>5)
+                 count5++;
+         }
+         
+         System.out.println(" TASK 12: is " + count5);
+         /*
+         * Boss Level Task 12. Create an array with just words
+         * of length greater than 5
+         */
+         k=0; // previously defined
+         String[] task12Greater= new String[count5];
+         for (int i=0 ; i<ar5.length ; i++)
+         {
+             if (ar5[i].length() >5)
+             {
+                 task12Greater[k]=ar5[i];
+                 k++;
+             }
+         }
+         
+         for (int i=0 ; i<task12Greater.length ; i++)
+         {
+             System.out.println(" 12 BOSS["+i+"] :"+task12Greater[i]);
+         }
         
         
         
@@ -359,9 +445,23 @@ class Main
          * Use a for loop to print out the names of monster that start with
          * a vowel
          */
-        
-        
-        
+        String[] monsterArray={ "Cookie",  "Grover",  "Oscar the Grouch" , "Elmo", "Rosita"};
+        /*
+        for(int i=0; i<monsterArray.length; i++)
+        {
+            String[] out=new String[monsterArray.length];
+            String start=monsterArray[i].substring(0,1);
+            if(start=='A'||start=='E'||start=='I'||start=='O'||start=='U')
+            {
+                
+            }
+            
+        }
+        */
+       
+       
+       
+       
          /*
           * Task 14
           * Create an array of integers from 3 to 94 and call it arx
