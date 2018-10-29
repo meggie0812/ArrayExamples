@@ -387,8 +387,7 @@ class Main
         
         }
          System.out.println("task 12 is "+moreThan5);
-         for(int i=0; i<ar5.length; i++)
-        {
+         
          
          
          
@@ -445,20 +444,21 @@ class Main
          * Use a for loop to print out the names of monster that start with
          * a vowel
          */
-        String[] monsterArray={ "Cookie",  "Grover",  "Oscar the Grouch" , "Elmo", "Rosita"};
-        /*
-        for(int i=0; i<monsterArray.length; i++)
+         System.out.println("** Task 13 **");
+         String[] monsterArray={ "Cookie", "Grover", "Oscar the Grouch" , "Elmo", "Rosita"};
+        
+        
+        for (int i=0 ; i<monsterArray.length; i++)
+            System.out.println(" [ "+i+"] "+monsterArray[i]);
+        
+        for (int i=0 ; i<monsterArray.length; i++)
         {
-            String[] out=new String[monsterArray.length];
-            String start=monsterArray[i].substring(0,1);
-            if(start=='A'||start=='E'||start=='I'||start=='O'||start=='U')
-            {
-                
-            }
-            
+            char c= monsterArray[i].toLowerCase().charAt(0);
+            if (c=='a' || c=='e' || c=='i' || c=='o' || c=='u')
+                System.out.println(monsterArray[i]); 
         }
-        */
-       
+                
+               
        
        
        
@@ -477,8 +477,12 @@ class Main
           *      So arindex[0]=2
           *         arindex[1]=5
           */
-         
+         System.out.println("** Task 14 **");
+ 
+             
+       
          /*
+          * Task 15
           * Create an arrary called "fb" and calculate the
           * first 10 fibonacci sequence.  You start with
           * fb[0]=1
@@ -487,6 +491,14 @@ class Main
           * fb[3]=fb[1]+fb[2]
           * fb[4]=fb[2]+fb[3]
           */
-       
+         int[] fb=new int[10];
+         
+         for(int i=2; i<fb.length; i++)
+         {
+             fb[i]=fb[i-2]+fb[i-1];
+             System.out.println(fb[i]);
+             
+         }
+         
     }
 }
