@@ -533,12 +533,16 @@ class Main
           * fb[4]=fb[2]+fb[3]
           */
          int[] fb=new int[10];
+         f[0]=1;
+         f[1]=1;
          
-         for(int i=2; i<fb.length+2; i++)
+         for(int i=2; i<fb.length; i++)
          {
              fb[i]=fb[i-2]+fb[i-1];
+         }
+         for(int i=0; i<fb.length; i++)
+         {
              System.out.println(fb[i]);
-             
          }
          
     }
