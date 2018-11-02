@@ -533,8 +533,8 @@ class Main
           * fb[4]=fb[2]+fb[3]
           */
          int[] fb=new int[10];
-         f[0]=1;
-         f[1]=1;
+         fb[0]=1;
+         fb[1]=1;
          
          for(int i=2; i<fb.length; i++)
          {
