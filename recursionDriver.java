@@ -28,14 +28,15 @@ public class recursionDriver
         */
        
        
-        int sum=0;
-        if(n<1)
+        //task 4 & 5
+        if(n<=0)
             return 0;
+          
+        return n+count(n-2);
+        
+        
+        
             
-        if (n%2==1)
-            return sum;
-            
-        return sum+count(n-1); 
     }
     
     
@@ -54,9 +55,10 @@ public class recursionDriver
           * 
           */   
          int counted=0;
+         
 
          // Task 1.
-         counted = count(10);
+         counted = count(9);
          System.out.println(counted);
 
     }
