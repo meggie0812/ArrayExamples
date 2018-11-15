@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Digits
+comment1.params=
+comment1.target=Digits()
+comment2.params=num
+comment2.target=Digits(int)
+comment3.params=
+comment3.target=boolean\ isStrictlyIncreasing()
+numComments=4
