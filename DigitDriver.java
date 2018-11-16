@@ -4,8 +4,11 @@ public class DigitDriver
     public static void main(String[] args)
     {
         Digits digits = new Digits(13456);
-        digits.isStrictlyIncreasing();
-        
+        //digits.isStrictlyIncreasing();
+        if(digits.isStrictlyIncreasing()==true)
+          System.out.println("true");
+        else
+         System.out.println("false");
     }
 }
 
